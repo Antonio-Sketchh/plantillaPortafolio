@@ -483,6 +483,11 @@ img {
     transform: translateY(-2px);
 }
 
+.about-image {
+    margin-top: -10rem;
+    align-self: start;
+}
+
 .image-wrapper {
     position: relative;
     border-radius: var(--border-radius);
@@ -525,8 +530,9 @@ img {
 
 .image-wrapper img {
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: 3/4;
     object-fit: cover;
+    object-position: top;
     border-radius: var(--border-radius);
 }
 .timeline {

@@ -905,6 +905,133 @@ img {
     background: var(--accent-glow);
     border-radius: 4px;
 }
+
+/* Project card clickable */
+a.project-card {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+a.project-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Proyecto Destacado */
+.project-card.featured {
+    grid-column: 1 / -1;
+    display: block;
+    max-width: 100%;
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 30px var(--accent-glow);
+}
+
+.project-card.featured .project-image {
+    display: none;
+}
+
+.project-card.featured .project-info {
+    padding: 32px 40px;
+}
+
+.project-label {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.project-card.featured .project-info h3 {
+    font-size: 1.4rem;
+}
+
+.project-features {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 16px;
+}
+
+.project-features li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.project-features li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-weight: bold;
+}
+
+.project-github-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: var(--accent-glow);
+    border: 1px solid var(--accent);
+    border-radius: var(--border-radius-sm);
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.project-github-cta .fa-github {
+    font-size: 1.2rem;
+}
+
+.project-github-cta .fa-arrow-right {
+    transition: transform 0.3s ease;
+}
+
+a.project-card:hover .project-github-cta {
+    background: var(--accent);
+    color: #fff;
+}
+
+a.project-card:hover .project-github-cta .fa-arrow-right {
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .project-card.featured .project-info {
+        padding: 24px 20px;
+    }
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: var(--transition);
+    display: block;
+}
+
+.contact-link:hover {
+    color: #25d366;
+}
+
+.contact-link .fa-whatsapp {
+    color: #25d366;
+}
+
 .contact-content {
     text-align: center;
     max-width: 550px;

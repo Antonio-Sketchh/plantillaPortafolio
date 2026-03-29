@@ -926,10 +926,6 @@ a.project-card:hover {
     box-shadow: 0 0 30px var(--accent-glow);
 }
 
-.project-card.featured .project-image {
-    display: none;
-}
-
 .project-card.featured .project-info {
     padding: 32px 40px;
 }
